@@ -7,6 +7,9 @@
   },
   "scripts": {
     "dev": "vercel dev",
-    "build": "echo 'No build required for static site'"
+    "build": "echo 'Static files ready in public directory'"
+  },
+  "vercel": {
+    "outputDirectory": "public"
   }
 }

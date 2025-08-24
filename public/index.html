@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlipCoin - We Moon or We Rug</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="notificationContainer" class="notification-container">
+            <!-- Notifications will be dynamically added here -->
+        </div>
+
+        <!-- Top Banner -->
+        <div class="top-banner">
+            <div class="banner-content">
+                <h2 class="banner-title">
+                    <span class="moon-text">Flipcoin</span>: We 
+                    <span class="moon-gradient">Moon</span> or We 
+                    <span class="rug-gradient">Rug</span> — 
+                    <span class="community-text">Community-driven Memecoin!</span>
+                </h2>
+                <div class="banner-subtitle">
+                    🚀 Join the ultimate flip-to-earn memecoin experience! 🎯
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 MOON or RUG - Memecoin Flip Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <!-- Notification System -->
+        <div class="notification-container" id="notificationContainer">
+            <!-- Notifications will be dynamically added here -->
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-section">
+                <div class="flipcoin-logo">🪙</div>
+                <div class="header-text">
+                    <h1 class="title">FLIPCOIN</h1>
+                    <p class="tagline">We Moon or We Rug</p>
+                </div>
+            </div>
+            <div class="header-stats" id="headerStats">
+                <div class="global-stat">
+                    <span class="stat-number" id="globalMoons">0</span>
+                    <span class="stat-label">🌙 Total Moons</span>
+                </div>
+                <div class="global-stat">
+                    <span class="stat-number" id="globalRugs">0</span>
+                    <span class="stat-label">💸 Total Rugs</span>
+                </div>
+                <div class="global-stat">
+                    <span class="stat-number" id="globalFlips">0</span>
+                    <span class="stat-label">🎯 Total Flips</span>
+                </div>
+                <div class="global-stat dev-allocation">
+                    <span class="stat-number" id="devAllocation">100</span>
+                    <span class="stat-label">👑 Dev Allocation %</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- User Entry Section -->
+        <div class="user-section" id="userSection">
+            <div class="card">
+                <h2>🚀 Start Playing</h2>
+                <div class="input-group">
+                    <input type="text" id="usernameInput" placeholder="Enter your username" maxlength="20">
+                    <button id="enterGameBtn" onclick="enterGame()">🎮 START PLAYING</button>
+                </div>
+                <div class="quick-stats">
+                    <p>Join <span id="totalPlayers">0</span> players who have made <span id="totalGlobalFlips">0</span> flips!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Dashboard -->
+        <div class="dashboard" id="dashboard" style="display: none;">
+            <!-- User Info -->
+            <div class="user-info">
+                <h2>Welcome, <span id="playerName"></span>! 🎮</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">🌙 MOONS:</span>
+                        <span class="stat-value" id="moonCount">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">💸 RUGS:</span>
+                        <span class="stat-value" id="rugCount">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">🎯 TOTAL:</span>
+                        <span class="stat-value" id="totalFlips">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coin Flip Game -->
+            <div class="game-area">
+                <div class="coin-container">
+                    <div class="coin" id="coin">
+                        <div class="coin-face moon-face">
+                            <div class="moon-emoji">🌙</div>
+                            <div class="coin-text">WE WILL<br>MOON</div>
+                        </div>
+                        <div class="coin-face rug-face">
+                            <div class="rug-emoji">💸</div>
+                            <div class="coin-text">WE WILL<br>RUG</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="game-controls">
+                    <button class="flip-btn" id="flipBtn" onclick="flipCoin()">
+                        🪙 FLIP THE COIN
+                    </button>
+                    <div class="result" id="result"></div>
+                </div>
+            </div>
+
+            <!-- Extreme Performers Section -->
+            <div class="extreme-performers">
+                <h3>⚡ EXTREME PERFORMERS</h3>
+                <div class="performers-grid">
+                    <div class="performer-card moon-champion">
+                        <div class="performer-icon">🌙👑</div>
+                        <div class="performer-title">MOON CHAMPION</div>
+                        <div class="performer-name" id="moonChampion">No moon champion yet!</div>
+                        <div class="performer-stat" id="moonChampionStat"></div>
+                    </div>
+                    <div class="performer-card rug-king">
+                        <div class="performer-icon">💸👑</div>
+                        <div class="performer-title">RUG KING</div>
+                        <div class="performer-name" id="rugKing">No rug king yet!</div>
+                        <div class="performer-stat" id="rugKingStat"></div>
+                    </div>
+                    <div class="performer-card most-active">
+                        <div class="performer-icon">🔥</div>
+                        <div class="performer-title">MOST ACTIVE</div>
+                        <div class="performer-name" id="mostActive">No active players yet!</div>
+                        <div class="performer-stat" id="mostActiveStat"></div>
+                    </div>
+                    <div class="performer-card luckiest">
+                        <div class="performer-icon">🍀</div>
+                        <div class="performer-title">LUCKIEST DEVIL</div>
+                        <div class="performer-name" id="luckiestPlayer">No lucky players yet!</div>
+                        <div class="performer-stat" id="luckiestStat"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Event Announcements -->
+            <div class="event-announcements">
+                <h3>🔥 LIVE COMMUNITY EVENTS</h3>
+                <div class="event-ticker-container">
+                    <div class="event-ticker" id="eventTicker">
+                        <!-- Live scrolling ticker messages -->
+                    </div>
+                </div>
+                <div class="event-cards-container" id="eventCardsContainer">
+                    <!-- Dynamic event cards will be added here -->
+                </div>
+            </div>
+
+            <!-- Global Events Banner -->
+            <div class="global-events" id="globalEvents" style="display: none;">
+                <div class="event-banner" id="eventBanner">
+                    <!-- Dynamic event content -->
+                </div>
+            </div>
+
+            <!-- Enhanced Leaderboards -->
+            <div class="leaderboards-container">
+                <h3>🏆 LEADERBOARDS</h3>
+                <div class="leaderboard-tabs">
+                    <button class="tab-btn active" onclick="switchTab('moons')" id="moonsTab">
+                        🌙 MOST MOONS
+                    </button>
+                    <button class="tab-btn" onclick="switchTab('rugs')" id="rugsTab">
+                        💸 MOST RUGS
+                    </button>
+                    <button class="tab-btn" onclick="switchTab('active')" id="activeTab">
+                        🔥 MOST ACTIVE
+                    </button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="moonsPane">
+                        <div class="leaderboard-header">
+                            <div class="header-rank">Rank</div>
+                            <div class="header-name">Username</div>
+                            <div class="header-stat">Moons 🌙</div>
+                        </div>
+                        <div class="leaderboard-list" id="moonsLeaderboard">
+                            <!-- Most Moons leaderboard -->
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="rugsPane">
+                        <div class="leaderboard-header">
+                            <div class="header-rank">Rank</div>
+                            <div class="header-name">Username</div>
+                            <div class="header-stat">Rugs 💸</div>
+                        </div>
+                        <div class="leaderboard-list" id="rugsLeaderboard">
+                            <!-- Most Rugs leaderboard -->
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="activePane">
+                        <div class="leaderboard-header">
+                            <div class="header-rank">Rank</div>
+                            <div class="header-name">Username</div>
+                            <div class="header-stat">Activity 🔥</div>
+                        </div>
+                        <div class="leaderboard-list" id="activeLeaderboard">
+                            <!-- Most Active leaderboard -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Feed -->
+            <div class="live-feed-container">
+                <h3>🔴 LIVE FEED</h3>
+                <div class="live-feed" id="liveFeed">
+                    <div class="feed-placeholder">Waiting for flips...</div>
+                </div>
+                <div class="feed-controls">
+                    <div class="feed-status">
+                        <span class="pulse-dot"></span>
+                        <span>LIVE</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reset Section -->
+            <div class="reset-section">
+                <button class="logout-btn" onclick="logout()">👋 LOGOUT</button>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>🚀 Built for the moon, prepared for the rug 💎</p>
+            <div class="social-links">
+                <span>📈 Diamond Hands Only 💎🙌</span>
+            </div>
+            <div class="data-status" id="dataStatus">
+                <span class="data-indicator">💾 Data Auto-Saved</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
