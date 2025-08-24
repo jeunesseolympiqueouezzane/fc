@@ -1,0 +1,12 @@
+{
+  "name": "flipcoin-game",
+  "version": "1.0.0",
+  "description": "FlipCoin game with shared backend",
+  "engines": {
+    "node": "18.x"
+  },
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build required for static site'"
+  }
+}
