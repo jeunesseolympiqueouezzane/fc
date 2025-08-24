@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stats Test</title>
+</head>
+<body>
+    <h1>Testing Extreme Performers</h1>
+    
+    <div id="moonChampion">Loading...</div>
+    <div id="moonChampionStat">Loading...</div>
+    
+    <div id="rugKing">Loading...</div>
+    <div id="rugKingStat">Loading...</div>
+    
+    <div id="mostActive">Loading...</div>
+    <div id="mostActiveStat">Loading...</div>
+    
+    <div id="luckiestPlayer">Loading...</div>
+    <div id="luckiestStat">Loading...</div>
+    
+    <h1>Testing Live Feed</h1>
+    <div id="liveFeed">Loading...</div>
+    
+    <h1>Testing Events</h1>
+    <div id="eventCardsContainer">Loading...</div>
+    
+    <script>
+        // Simple test script
+        console.log('Testing elements...');
+        
+        // Test if elements exist
+        const elements = ['moonChampion', 'rugKing', 'mostActive', 'luckiestPlayer', 'liveFeed', 'eventCardsContainer'];
+        elements.forEach(id => {
+            const element = document.getElementById(id);
+            console.log(id + ':', !!element);
+            if (element) {
+                element.textContent = 'Element found: ' + id;
+            }
+        });
+    </script>
+</body>
+</html>
